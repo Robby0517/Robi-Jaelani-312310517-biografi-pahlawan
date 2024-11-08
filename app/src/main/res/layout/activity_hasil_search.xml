@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/profil3"
+    android:padding="0dp">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:layout_margin="0dp"
+        android:background="@color/Primary"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_menu_24"/>
+
+        <TextView
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Image Pahlawan"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_supervised_user_circle_24"/>
+
+    </LinearLayout>
+
+    <!-- Profile Card -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="20dp"
+            android:layout_margin="16dp"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/carakter"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/soekarno"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ir. Soekarno"
+                android:textSize="20sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/biography_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biografi pahlawan nasional Ir. Soekarno"
+                android:textSize="16sp"
+                android:textColor="#777777"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="352dp"
+                android:layout_height="157dp"
+                android:text="Ir. Soekarno atau biasa dipanggil dengan sebutan Bung Karno adalah seorang negarawan, orator, dan Presiden Indonesia pertama yang menjabat sejak tahun 1945 hingga tahun 1967. Ia menjabat sebagai presiden setelah memproklamasikan kemerdekaan Indonesia bersama wakilnya, Mohammad Hatta. Selain dikenal sebagai Bapak Proklamator, Soekarno dikenal juga sebagai pencetus Pancasila, dasar negara dan ideologi bangsa Indonesia.
+"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="327dp"
+                android:text="Pada pertengahan tahun 1960-an, di masa-masa akhir jabatan Soekarno, Indonesia mengalami stagnasi produksi, kemiskinan dan kelaparan yang merajalela, infrastruktur yang tidak terurus, dan hiperinflasi mencapai hampir 600 persen.
+
+Pada 11 Maret 1966, Soekarno menandatangani Surat Perintah yang dikenal sebagai Supersemar yang menugaskan Letnan Jenderal Soeharto untuk mengamankan dan menjaga keamanan negara dan institusi kepresidenan. Supersemar menjadi landasan Letnan Jenderal Soeharto untuk membubarkan Partai Komunis Indonesia (PKI) dan mengganti anggota-anggotanya yang duduk di parlemen. Setelah pertanggungjawabannya ditolak Majelis Permusyawaratan Rakyat Sementara (MPRS) pada sidang umum ke empat tahun 1967, Soekarno diberhentikan dari jabatannya sebagai presiden pada Sidang Istimewa MPRS pada tahun yang sama dan Soeharto menggantikannya sebagai pejabat Presiden Republik Indonesia." />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@color/Primary">
+
+        <ImageView
+            android:id="@+id/image_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:src="@drawable/ic_baseline_image_24" />
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_home_24"
+            android:layout_marginEnd="70dp">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/person_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_person_24"/>
+    </LinearLayout>
+</LinearLayout>

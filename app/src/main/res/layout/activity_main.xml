@@ -1,0 +1,318 @@
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:background="@drawable/profil3"
+        tools:context=".MainActivity">
+
+        <!-- Toolbar -->
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="421dp"
+            android:layout_height="139dp"
+            android:layout_margin="0dp"
+            android:background="@color/Primary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_menu_24"/>
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="315dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="Search"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_supervised_user_circle_24"/>
+
+        </LinearLayout>
+
+        <!-- Filter Tags -->
+
+        <!-- Result Count -->
+
+        <!-- Grid of Results -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Item 1 -->
+                    <LinearLayout
+                        android:id="@+id/backgrounputih"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/carakter"
+                            android:layout_width="166dp"
+                            android:layout_height="116dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/soekarno" />
+
+                        <TextView
+                            android:id="@+id/twxtsoekarno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Ir.Soekarno"
+                            android:textColor="#333333"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textsoekarno1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Biografi pahlawan Ir.Soekarno"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Item 2 -->
+                    <LinearLayout
+                        android:id="@+id/backgrounputih1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/carakter1"
+                            android:layout_width="164dp"
+                            android:layout_height="116dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mohammad_hatta" />
+
+                        <TextView
+                            android:id="@+id/textmohammadhata"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Mohammad Hatta"
+                            android:textColor="#333333"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textmohammadhata1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Biografi pahlawan Mohammad Hatta"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Item 3 -->
+                    <LinearLayout
+                        android:id="@+id/backgrounputih2"
+                        android:layout_width="10dp"
+                        android:layout_height="256dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/carakter2"
+                            android:layout_width="170dp"
+                            android:layout_height="177dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/r_a_kartini" />
+
+                        <TextView
+                            android:id="@+id/textkartini"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="R.A Kartini"
+                            android:textColor="#333333"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textkartini1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Biografi pahlawan R.A Kartini"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Item 4 -->
+                    <LinearLayout
+                        android:id="@+id/backgrounputih3"
+                        android:layout_width="4dp"
+                        android:layout_height="253dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/carakter3"
+                            android:layout_width="167dp"
+                            android:layout_height="172dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pangeran_diponegoro" />
+
+                        <TextView
+                            android:id="@+id/textpangeran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Pangeran Diponogoro"
+                            android:textColor="#333333"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textpangeran1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Biografi pahlawan Pangeran Diponogoro"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Row 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Item 5 -->
+                    <LinearLayout
+                        android:id="@+id/backgrounputih4"
+                        android:layout_width="5dp"
+                        android:layout_height="238dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/carakter4"
+                            android:layout_width="168dp"
+                            android:layout_height="141dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/tuanku_iman_bonjol" />
+
+                        <TextView
+                            android:id="@+id/texttuanku"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Tuanku Iman Bonjol"
+                            android:textColor="#333333"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/texttuanku1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Biografi pahlawan Teuku Iman Bonjol"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Item 6 -->
+                    <LinearLayout
+                        android:id="@+id/backgrounputih5"
+                        android:layout_width="6dp"
+                        android:layout_height="241dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/carakter5"
+                            android:layout_width="182dp"
+                            android:layout_height="144dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/raden_dewi_sartika" />
+
+                        <TextView
+                            android:id="@+id/textsartika"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Raden Dewi Sartika"
+                            android:textColor="#333333"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textsartika2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="biografi pahlawan Raden Dewi Sartika"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
