@@ -10,16 +10,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
-    private EditText etUsername, etPassword;
+    private EditText etUsername, etEmail, etPassword;
     private Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register); // Pastikan layout ini sesuai dengan file XML Anda
+        setContentView(R.layout.activity_register); // Pastikan nama file XML sesuai
 
-        // Sesuaikan komponen berdasarkan ID di XML
+        // Menghubungkan komponen XML ke Java dengan ID yang sesuai
         etUsername = findViewById(R.id.username);
+        etEmail = findViewById(R.id.email);
         etPassword = findViewById(R.id.password2);
         btnRegister = findViewById(R.id.akunButton);
 
@@ -27,20 +28,34 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String username = etUsername.getText().toString();
+                String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
 
-                // Simpan data pengguna
-                SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("username", username);
-                editor.putString("password", password);
-                editor.apply();
+                if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(Register.this, "Harap isi semua kolom", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-                // Tampilkan pesan dan pindah ke MainActivity
-                Toast.makeText(Register.this, "Akun berhasil dibuat!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Register.this, Login.class);
-                startActivity(intent);
-                finish();
+                SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
+
+                // Periksa apakah akun sudah ada
+                if (sharedPreferences.contains(username)) {
+                    Toast.makeText(Register.this, "Username sudah digunakan", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Simpan data akun baru
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString(username + "_username", username);
+                    editor.putString(username + "_email", email);
+                    editor.putString(username + "_password", password);
+                    editor.apply();
+
+                    Toast.makeText(Register.this, "Pendaftaran berhasil", Toast.LENGTH_SHORT).show();
+
+                    // Berpindah ke halaman login atau MainActivity
+                    Intent intent = new Intent(Register.this, Login.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }
